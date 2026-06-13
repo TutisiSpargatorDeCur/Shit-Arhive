@@ -1,77 +1,74 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    
-<body bgcolor="#3d2b1f">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Access</title>
 
-</body>
-<center>
-    <font size=60">
-    <h>Shit Arhive</h>
-    </font>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-</center>
+        .login-box {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 300px;
+        }
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<center>
-<font size="40">
-     <font color="#ffa07a"
-   <p>Siteul acesta este creat pentru oamenii cu necesitatea de a vedea pozele cu cacat
-      de la oameni care au apelat la Varutzu sa puna pozele lor speciale cu fecalele lor 
-     pe acest Site iar ele vor fi afisate mai jos cu numele sau porecla omului care a eliminat 
-    din colonul lui fecalele din poza afisata. pozele pot fi vizualizate si savorate in josul acestei pagini.
-</p>
-</font>
-</center>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            box-sizing: border-box;
+        }
 
-    <h2>Poze cu cacat</h2>
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+        }
 
-<div id="photos">
-    <p>Cacatul lui Nanebobo 5/22/2026</p>
-    <img src="https://cdn.corenexis.com/f/VQkWetoO6f1.jpeg" width="300"><br><br>
-    <p>Cacatul lui Varutzu 5/25/2026</p>
-    <img src="https://cdn.corenexis.com/f/l7TnZKzPLJL.jpeg" width="300"><br><br>
-    <img src="https://cdn.corenexis.com/f/F2bAcnyWXfc.jpeg" width="300"><br><br>
-    <p>Cacatul lui Nanebobo 5/27/2026</p>
-    <img src="https://cdn.corenexis.com/f/1DJKYIEF4Np.jpeg" width="300"><br><br>
-    <br>
-    <br>
-   <p>SPECIAL</p>
-    <br>
-    <br>
-    <p>Cacatul lui Nanebobo 5/28/2026 + Voma (not official source)</p>
-    <img src="https://cdn.corenexis.com/f/LSNvoL6xOLt.jpeg" width="300"><br><br>
-    <br>
-    <br>
-    <p>Back to normal</p>
-    <br>
-    <br>
-    <p>Cacatul lui Varutzu 5/31/2026</p>
-    <img src="https://cdn.corenexis.com/f/r9tL4ZUpn5g.jpeg" width="300"><br><br>
-    <video src="https://cdn.imageurlgenerator.com/uploads/4553c523-28a2-4b74-9ab7-1b6f262dd935.mp4" width="300"></video><br><br>
-    <p>Cacatul lui Varutzu 6/9/2026</p>
-    <img src="https://cdn.corenexis.com/f/B5v6nWtjFzC.jpeg" width="300"><br><br>
-    <p>Cacatul lui Nanebobo 6/11/2026</p>
-    <img src="https://cdn.corenexis.com/f/TVuqQV98Rgo.jpeg" width="300"><br><br>
-    <img src="https://cdn.corenexis.com/f/Mqz3fjGlUBL.jpeg" width="300"><br><br>
-    <br>
-    <br>
-    <p>SPECIAL</p>
-    <p>PUFI PUFI aka Luna Pula</p>
-    <img src="https://cdn.corenexis.com/f/YSfOCLwVWO3.jpeg" width="300"><br><br>
+        #error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-box">
+    <h2>Enter Password</h2>
+
+    <input type="password" id="password" placeholder="Password">
+
+    <button onclick="checkPassword()">Enter Site</button>
+
+    <p id="error"></p>
 </div>
 
+<script>
+    function checkPassword() {
+        const password = document.getElementById("password").value;
+
+        if (password === "davidegay123") {
+            window.location.href = "main.html";
+        } else {
+            document.getElementById("error").textContent =
+                "Incorrect password.";
+        }
+    }
+</script>
 
 </body>
-</head>
-
+</html>
