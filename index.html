@@ -7,8 +7,14 @@
 <center>
     <h>Bun venit pe Shit Arhive. Pentru ati putea intra pe site trebuie a cunoaste parola siteului.</h>
 </center>
+    <div class="line"></div>
     <style>
         body {
+            .line {
+                border-bottom: 5px #3d2b1f;
+            margin-top: 10px;
+            width: 100%;
+         }
             font-family: Arial, sans-serif;
             background: #f4f4f4;
             display: flex;
@@ -53,18 +59,17 @@
 
     <input type="password" id="password" placeholder="Password">
 
-    <button onclick="checkPassword()">Enter Site</button>
+    <button onclick="checkPassword()">intra</button>
 
     <p id="error"></p>
 </div>
 
 <script>
     function checkPassword() {
-        const password = document.getElementById("Parola").value;
+        const password = document.getElementById("password").value;
 
         if (password === "davidegay123") {
             window.location.href = "main.html";
-            <p>Parola corecta. Bun venit! </p>
         } else {
             document.getElementById("error").textContent =
                 "Parola introdusa este incorecta. Incearca inca odata.";
